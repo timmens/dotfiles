@@ -2,7 +2,8 @@
 
 ## about this repository
 
-On this repo I store my config files and a few scripts...
+On this repo I store my config files and a few scripts, I also list a few
+important programs..
 
 Maybe at some point I consider writing scripts which automatically download and
 setup as many of the below listed applications as possible. Until then, happy
@@ -20,6 +21,7 @@ setup as many of the below listed applications as possible. Until then, happy
 ### window manager
 - i3 (https://i3wm.org/)
 - i3lock (https://github.com/i3/i3lock)
+- i3-battery-popup (https://github.com/rjekker/i3-battery-popup)
 
 ### editor and viewer
 - neovim (https://www.vim.org/)
@@ -32,3 +34,4 @@ setup as many of the below listed applications as possible. Until then, happy
 ### miscellaneous
 - screenkey (https://github.com/wavexx/screenkey)
 - compton (https://github.com/chjj/compton)
+- mailspring (https://getmailspring.com/)
