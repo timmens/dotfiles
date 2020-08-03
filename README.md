@@ -1,28 +1,34 @@
-# Dotfiles
+# dotfiles
 
-## About the Repository
+## about this repository
 
-On this repo I store my dotfiles and configurations to decrease setup costs on a new machine.
-Further I list important applications I use (and where to find them).
+On this repo I store my config files...
 
-## Status
+Maybe at some point I consider writing scripts which automatically download and
+setup as many of the below listed applications as possible. Until then, happy
+``apt-get install'ing``.
 
-This repository is still under construction and will be made useful for others by providing more files and detailed documentation by approx. July 2020.
+## programs
 
-## Applications
+### terminal stuff
 
-- Alacritty (https://github.com/alacritty/alacritty)
-- i3 (https://i3wm.org/)
-- i3lock (https://github.com/i3/i3lock)
-- Atom (https://atom.io/)
-- PyCharm Professional (https://www.jetbrains.com/pycharm/)
-- Vim (https://www.vim.org/)
-- Anaconda3 (https://docs.anaconda.com/anaconda/install/linux/)
+- alacritty (https://github.com/alacritty/alacritty)
 - z (https://github.com/rupa/z)
 - oh-my-zsh (https://github.com/ohmyzsh/ohmyzsh)
 - antigen (https://github.com/zsh-users/antigen)
-- Zathura (https://pwmt.org/projects/zathura/)
-- Screenkey (https://github.com/wavexx/screenkey)
-- Polybar (https://github.com/polybar/polybar)
-- direnv (https://direnv.net/)
-- vim-latex-live-preview (https://github.com/xuhdev/vim-latex-live-preview)
+
+### window manager
+- i3 (https://i3wm.org/)
+- i3lock (https://github.com/i3/i3lock)
+
+### editor and viewer
+- neovim (https://www.vim.org/)
+- zathura (https:misc//pwmt.org/projects/zathura/)
+- vscode (https://code.visualstudio.com/)
+
+### python and so on
+- miniconda (https://docs.anaconda.com/anaconda/install/linux/)
+
+### miscellaneous
+- screenkey (https://github.com/wavexx/screenkey)
+- compton (https://github.com/chjj/compton)

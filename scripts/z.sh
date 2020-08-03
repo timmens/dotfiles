@@ -1,0 +1,1 @@
+/home/tim/bin/z.sh

@@ -1,0 +1,1 @@
+/home/tim/.config/powerlevel10k/config/p10k-lean.zsh
