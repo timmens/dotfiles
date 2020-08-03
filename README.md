@@ -22,6 +22,7 @@ setup as many of the below listed applications as possible. Until then, happy
 - i3 (https://i3wm.org/)
 - i3lock (https://github.com/i3/i3lock)
 - i3-battery-popup (https://github.com/rjekker/i3-battery-popup)
+- arandr (https://christian.amsuess.com/tools/arandr/)
 
 ### editor and viewer
 - neovim (https://www.vim.org/)
