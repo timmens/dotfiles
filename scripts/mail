@@ -1,1 +1,4 @@
-/home/tim/bin/mail
+#!/bin/zsh
+
+nohup mailspring >/dev/null &
+disown

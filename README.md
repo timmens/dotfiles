@@ -2,7 +2,7 @@
 
 ## about this repository
 
-On this repo I store my config files...
+On this repo I store my config files and a few scripts...
 
 Maybe at some point I consider writing scripts which automatically download and
 setup as many of the below listed applications as possible. Until then, happy
