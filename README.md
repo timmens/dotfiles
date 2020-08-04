@@ -28,7 +28,7 @@ setup as many of the below listed applications as possible. Until then, happy
 
 ### editor and viewer
 - neovim (https://www.vim.org/)
-- zathura (https:misc//pwmt.org/projects/zathura/)
+- zathura (https://pwmt.org/projects/zathura/)
 - vscode (https://code.visualstudio.com/)
 
 ### python and so on
