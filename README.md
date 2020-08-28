@@ -2,12 +2,14 @@
 
 ## about this repository
 
-On this repo I store my config files and a few scripts, I also list a few
-important programs..
+Here I store some config files and a few scripts, I also list a few
+programs that I use frequently..
 
 Maybe at some point I consider writing scripts which automatically download and
 setup as many of the below listed applications as possible. Until then, happy
 ``apt-get install'ing``.
+
+**Any remarks and or suggestions are very welcome!**
 
 ## programs
 
@@ -26,7 +28,7 @@ setup as many of the below listed applications as possible. Until then, happy
 
 ### editor and viewer
 - neovim (https://www.vim.org/)
-- zathura (https:misc//pwmt.org/projects/zathura/)
+- zathura (https://pwmt.org/projects/zathura/)
 - vscode (https://code.visualstudio.com/)
 
 ### python and so on
