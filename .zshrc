@@ -31,12 +31,8 @@ antigen apply
 
 # bindkeys ---------------------------------------------------------------------
 bindkey '^[[A' history-substring-search-up  # zsh-history-substring-search
-bindkey '^[[B' history-substring-search-down   # zsh-history-substring-search
-bindkey -v  # vim
-# bindkey -M vicmd 'k' history-substring-search-up
-# bindkey -M vicmd 'j' history-substring-search-down
-HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
-
+bindkey '^[[B' history-substring-search-down  # zsh-history-substring-search
+# bindkey -v  # vim
 
 # alias ------------------------------------------------------------------------
 alias zshconfig="nvim ~/.zshrc"
@@ -56,9 +52,25 @@ alias add="git add"
 alias commit="git commit"
 alias push="git push"
 
+# github-pages
+alias gitpages="ghp-import -n -p -f"
+
 # toggle wifi
 alias wifion="nmcli radio wifi on"
 alias wifioff="nmcli radio wifi off"
+
+# jump into debugger on error (python)
+alias pybug="python -m pdb -c continue"
+
+# copy file contents to clipboard
+alias copy="xclip -sel c <"
+
+# enter python debugger on error
+alias pybug="python -m pdb -c continue"
+
+# waf (oh god when will I start using pytask)
+alias wafbuild="python waf.py -v"
+alias wafclean="python waf.py distclean"
 
 
 # functions --------------------------------------------------------------------

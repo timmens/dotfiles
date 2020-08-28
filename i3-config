@@ -177,13 +177,15 @@ bar {
 
 default_border none
 
+# audio regulation
 bindsym XF86AudioRaiseVolume exec volume up
 bindsym XF86AudioLowerVolume exec volume down
 bindsym XF86AudioMute exec volume mute
 
+
 exec --no-startup-id i3-battery-popup -L 20 -N
 
 exec --no-startup-id "compton -b"
-exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.config/i3/wallpaper.jpg &
 
-exec sciebo
+exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.config/i3/wallpaper.jpg &
+exec_always sciebo
