@@ -21,9 +21,13 @@ call plug#begin()
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'lervag/vimtex'
+Plug 'Rykka/InstantRst'
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
 let g:vimtex_view_method='zathura'
 let g:vimtex_compiler_progname = 'nvr'
 
+au BufReadPost *.svelte set syntax=html
+au BufReadPost * setlocal textwidth=88

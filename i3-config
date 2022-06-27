@@ -30,6 +30,12 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# VOLUME
+#
+# Volumen stuff (currently deactivated, because no volume needed)
+# exec --no-startup-id pasystray
+#
+
 # # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -46,6 +52,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty  # bindsym $mod+Return exec i3-sensible-terminal
 
 # start a browser
+# bindsym $mod+Shift+b exec chromium
 bindsym $mod+Shift+b exec google-chrome
 
 # start a text editor
@@ -53,6 +60,9 @@ bindsym $mod+Shift+p exec code
 
 # start htop
 bindsym $mod+Shift+t exec "alacritty -e htop"
+
+# start mail
+bindsym $mod+Shift+m exec mail
 
 # --------------------------------------------------------------------------------
 
@@ -183,9 +193,14 @@ bindsym XF86AudioLowerVolume exec volume down
 bindsym XF86AudioMute exec volume mute
 
 
+# show low battery status
 exec --no-startup-id i3-battery-popup -L 20 -N
 
+# composite manager
 exec --no-startup-id "compton -b"
+
+# activate german umlaute
+exec_always --no-startup-id "sleep 1; setxkbmap -option compose:caps"
 
 exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.config/i3/wallpaper.jpg &
 exec_always sciebo

@@ -1,4 +1,4 @@
-# zsh - script - tim mensinger - 2020-07-18
+#>/dev/null 2>&1 & zsh - script - tim mensinger - 2020-07-18
 # ------------------------------------------------------------------------------
 
 # enable Powerlevel10k instant prompt; should stay close to the top of ~/.zshrc.
@@ -43,8 +43,8 @@ alias ls="ls --color=auto"
 alias openf="zathura --fork"
 
 # locking device with i3
-alias lock="i3lock -c 000000 -n"
-alias locksleep="i3lock -c 000000 -n & sleep && xset dpms force off"
+alias lock="i3lock -c 000000 && systemctl suspend"
+alias locksleep="i3lock -c 000000 && systemctl hibernate"
 
 # git
 alias status="git status"
@@ -65,13 +65,6 @@ alias pybug="python -m pdb -c continue"
 # copy file contents to clipboard
 alias copy="xclip -sel c <"
 
-# enter python debugger on error
-alias pybug="python -m pdb -c continue"
-
-# waf (oh god when will I start using pytask)
-alias wafbuild="python waf.py -v"
-alias wafclean="python waf.py distclean"
-
 
 # functions --------------------------------------------------------------------
 function open() {
@@ -80,16 +73,67 @@ function open() {
 export open
 
 
+function weather() {
+    curl -4 wttr.in/$1
+}
+export weather
+
+function marpwatch() {
+
+    if [[ $# -eq 0 ]]; then
+        echo "No arguments passed."
+    elif [[ $# -eq 1 ]]; then
+        marp --html --watch -- $1 >/dev/null 2>&1 &
+    elif [[ $# -eq 2 ]]; then
+        marp --watch --html --theme-set $2 -- $1 >/dev/null 2>&1 &
+    else
+        echo "Too many arguments."
+    fi
+
+    sleep 1
+
+    google-chrome ${1%.md}.html >/dev/null 2>&1 &
+}
+export marpwatch
+
+
+
+function cleanup_latex() {
+    read -q "INPUT?Deleting all Latex auxiliary files. Continue?(y/n) "
+    if [[ $INPUT == "y" ]]; then
+        rm *.aux
+        rm *.bbl
+        rm *.bcf
+        rm *.blg
+        rm *.fdb_latexmk
+        rm *.fls
+        rm *.log
+        rm *.nav
+        rm *.out
+        rm *.run.xml
+        rm *.snm
+        rm *.synctex.gz
+        rm *.toc
+        rm *.synctex(busy)
+        rm *.bak
+    else
+        echo "\nAborting."
+    fi
+}
+export cleanup_latex
+
+
 # miscellaneus -----------------------------------------------------------------
 
 # z command
-. ~/bin/z.sh
+. ~/.local/bin/z.sh
 
 # colors in tmux
 export TERM=xterm-256color
 
 # update PATH ------------------------------------------------------------------
 path+=('/snap/bin')
+path+=('~/.local/bin')
 export PATH
 
 
