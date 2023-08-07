@@ -1,3 +1,0 @@
-#!/bin/zsh
-
-screenkey --no-whitespace --compr-cnt 5 --timeout 2 2>/dev/null  &
