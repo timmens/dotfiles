@@ -1,0 +1,4 @@
+channels:
+  - conda-forge
+env_prompt: '({default_env}) '
+solver: libmamba

@@ -1,0 +1,9 @@
+[user]
+	email = mensingertim@gmail.com
+	name = timmens
+[credential]
+	helper = store
+[core]
+	editor = nvim
+[push]
+	autoSetupRemote = true
